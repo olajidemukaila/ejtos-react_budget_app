@@ -1,0 +1,17 @@
+.alertsecondarycur {
+    color: black;
+    background-color: #caebce;
+    
+}
+.currency-dropdown {
+    background-color: #98fb98;
+    color: black;  
+  }
+  .currency-dropdown:hover {
+    color: black;
+    background-color: #ffffff;
+  }
+  .currency-dropdown label {
+    color: white;
+  }
+  
