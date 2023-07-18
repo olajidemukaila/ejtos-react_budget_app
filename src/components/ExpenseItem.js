@@ -47,16 +47,16 @@ import { AppContext } from '../context/AppContext';
             type: 'REDUCE_EXPENSE',
             payload: expense
         });
-
+        
     };
 
     return (
         <tr>
         <td>{props.name}</td>
         <td>{currency}{props.cost}</td>
-        <td><FaPlusCircle onClick={event=> increaseAllocation(props.name)}></FaPlusCircle></td>
-        <td><FaMinusCircle  onClick={event=> decreaseAllocation(props.name)}>-</FaMinusCircle></td>
-        <td><TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete></td>
+        <td><FaPlusCircle className="btn-containerinc increase" onClick={event=> increaseAllocation(props.name)}></FaPlusCircle></td>
+        <td><FaMinusCircle className="btn-containerdec decrease" onClick={event=> decreaseAllocation(props.name)}>-</FaMinusCircle></td>
+        <td><TiDelete size='3em'  onClick={handleDeleteExpense}></TiDelete></td>
         </tr>
     );
 };

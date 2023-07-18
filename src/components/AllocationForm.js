@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
-import { v4 as uuidv4 } from 'uuid'; // Import the uuid library
+import { decreaseBudget } from './Budget';
+
 
 const AllocationForm = () => {
-    const { expenses, dispatch, remaining, budget, currency } = useContext(AppContext);
+    const { expenses, dispatch, remaining, budget, currency} = useContext(AppContext);
 
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
@@ -51,6 +52,8 @@ const AllocationForm = () => {
             return;
         }
 
+       
+        
         const expense = {
             name: name,
             cost: parseInt(cost, 10),
